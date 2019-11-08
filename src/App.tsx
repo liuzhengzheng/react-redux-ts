@@ -1,19 +1,25 @@
-import * as React from 'react';
-import './App.css';
+import * as React from "react";
+import "./App.css";
 
-import logo from './logo.svg';
+import { Link } from "react-router-dom";
 
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <div className="app">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/page1">page1</Link>
+            </li>
+            <li>
+              <Link to="/page2">page2</Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     );
   }
